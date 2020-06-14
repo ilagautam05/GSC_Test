@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_row_list_item_view7_card_layout"
+    android:clickable="false"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="0dp"
+    app:strokeColor="#DBDCE0"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/product_title"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingStart="@dimen/margin_24"
+        android:paddingEnd="@dimen/margin_16"
+        android:gravity="center_vertical"
+        android:drawablePadding="@dimen/margin_16"
+        tools:text="@string/app_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/product_title_dropdown"
+            android:layout_width="@dimen/icon_size_24"
+            android:layout_height="@dimen/icon_size_24"
+            app:srcCompat="@drawable/ic_tick_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/product_title"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/expand_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/margin_16"
+        app:layout_constraintTop_toBottomOf="@+id/product_title"
+        android:background="@color/colorTextCaption">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/sub_category"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:paddingStart="@dimen/margin_24"
+            android:paddingEnd="@dimen/margin_24"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Select Subcategories"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/sub_category_dropdown"
+            android:layout_width="@dimen/icon_size_24"
+            android:layout_height="@dimen/icon_size_24"
+            android:layout_marginEnd="@dimen/margin_24"
+            app:layout_constraintBottom_toBottomOf="@+id/sub_category"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_triangle_down" />
+
+        <LinearLayout
+            android:id="@+id/sub_category_expand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/margin_12"
+            android:layout_marginEnd="@dimen/margin_12"
+            android:background="@color/blue_grey_100"
+            android:layout_marginBottom="@dimen/margin_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sub_category">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_48"
+                android:layout_margin="@dimen/margin_16"
+                app:cardElevation="4dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="Search Categories"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:textColor="@color/grey_60"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/sub_category_title1"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:paddingStart="@dimen/margin_24"
+                        android:paddingEnd="@dimen/margin_16"
+                        android:gravity="center_vertical"
+                        android:drawablePadding="@dimen/margin_16"
+                        android:text="Bearings"
+
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/expand_sub_product_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_marginBottom="@dimen/margin_16"
+                        app:layout_constraintTop_toBottomOf="@+id/product_title"
+                        android:background="@color/grey_60">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/sub_product"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_gravity="center"
+                            android:paddingStart="@dimen/margin_24"
+                            android:paddingEnd="@dimen/margin_24"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Select Sub-Products"
+                            android:textColor="@color/white"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/sub_product_dropdown"
+                            android:layout_width="@dimen/icon_size_24"
+                            android:layout_height="@dimen/icon_size_24"
+                            android:layout_marginEnd="@dimen/margin_24"
+                            app:layout_constraintBottom_toBottomOf="@+id/sub_product"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_triangle_down" />
+
+                        <LinearLayout
+                            android:id="@+id/sub_product_expand"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:layout_marginStart="@dimen/margin_12"
+                            android:layout_marginEnd="@dimen/margin_12"
+
+                            android:layout_marginBottom="@dimen/margin_16"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/sub_product">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/margin_48"
+                                android:layout_margin="@dimen/margin_16"
+                                app:cardElevation="@dimen/elevation_4">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="@dimen/margin_16"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:text="Search Sub Products"
+                                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                                    android:textColor="@color/grey_60"
+                                    android:textSize="16sp" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <androidx.core.widget.NestedScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/sub_product_title1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="48dp"
+                                        android:paddingStart="@dimen/margin_24"
+                                        android:paddingEnd="@dimen/margin_16"
+                                        android:gravity="center_vertical"
+                                        android:drawablePadding="@dimen/margin_16"
+                                        android:text="White Collectors"
+                                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginStart="@dimen/margin_16"
+                                        android:layout_marginEnd="@dimen/margin_16"
+                                        android:background="@color/cardStrokeColor"/>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/sub_product_title2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="48dp"
+                                        android:paddingStart="@dimen/margin_24"
+                                        android:paddingEnd="@dimen/margin_16"
+                                        android:gravity="center_vertical"
+                                        android:drawablePadding="@dimen/margin_16"
+                                        android:text="Blue Collectors"
+                                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginStart="@dimen/margin_16"
+                                        android:layout_marginEnd="@dimen/margin_16"
+                                        android:background="@color/cardStrokeColor"/>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/sub_product_title3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="48dp"
+                                        android:paddingStart="@dimen/margin_24"
+                                        android:paddingEnd="@dimen/margin_16"
+                                        android:gravity="center_vertical"
+                                        android:drawablePadding="@dimen/margin_16"
+                                        android:text="White Collectors"
+                                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginStart="@dimen/margin_16"
+                                        android:layout_marginEnd="@dimen/margin_16"
+                                        android:background="@color/cardStrokeColor"/>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/sub_product_title4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="48dp"
+                                        android:paddingStart="@dimen/margin_24"
+                                        android:paddingEnd="@dimen/margin_16"
+                                        android:gravity="center_vertical"
+                                        android:drawablePadding="@dimen/margin_16"
+                                        android:text="Red Collectors"
+                                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginStart="@dimen/margin_16"
+                                        android:layout_marginEnd="@dimen/margin_16"
+                                        android:background="@color/cardStrokeColor"/>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/sub_product_title5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="48dp"
+                                        android:paddingStart="@dimen/margin_24"
+                                        android:paddingEnd="@dimen/margin_16"
+                                        android:gravity="center_vertical"
+                                        android:drawablePadding="@dimen/margin_16"
+                                        android:text="Black Collectors"
+                                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginStart="@dimen/margin_16"
+                                        android:layout_marginEnd="@dimen/margin_16"
+                                        android:background="@color/cardStrokeColor"/>
+
+                                    <com.google.android.material.button.MaterialButton
+                                        android:id="@+id/btn_sub_product"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="56dp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="@dimen/margin_8"
+                                        android:layout_marginBottom="@dimen/margin_8"
+                                        android:layout_marginStart="@dimen/margin_24"
+                                        android:layout_marginEnd="@dimen/margin_24"
+                                        android:gravity="center"
+                                        android:text="+ Add Sub-Product"
+                                        android:textAllCaps="true"
+                                        app:iconPadding="-30dp"
+                                        app:cornerRadius="@dimen/margin_16"
+                                        android:textColor="@color/white"
+                                        app:iconSize="@dimen/margin_24"
+                                        android:textSize="16dp"
+                                        app:backgroundTint="@color/colorPrimary" />
+
+                                </LinearLayout>
+
+                            </androidx.core.widget.NestedScrollView>
+
+                        </LinearLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="@dimen/margin_16"
+                        android:layout_marginEnd="@dimen/margin_16"
+                        android:background="@color/cardStrokeColor"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/sub_category_title2"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:paddingStart="@dimen/margin_24"
+                        android:paddingEnd="@dimen/margin_16"
+                        android:gravity="center_vertical"
+                        android:drawablePadding="@dimen/margin_16"
+                        android:text="Current Collectors"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="@dimen/margin_16"
+                        android:layout_marginEnd="@dimen/margin_16"
+                        android:background="@color/cardStrokeColor"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/sub_category_title3"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:paddingStart="@dimen/margin_24"
+                        android:paddingEnd="@dimen/margin_16"
+                        android:gravity="center_vertical"
+                        android:drawablePadding="@dimen/margin_16"
+                        android:text="Fans and fan impellers"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="@dimen/margin_16"
+                        android:layout_marginEnd="@dimen/margin_16"
+                        android:background="@color/cardStrokeColor"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/sub_category_title4"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:paddingStart="@dimen/margin_24"
+                        android:paddingEnd="@dimen/margin_16"
+                        android:gravity="center_vertical"
+                        android:drawablePadding="@dimen/margin_16"
+                        android:text="Insulators"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="@dimen/margin_16"
+                        android:layout_marginEnd="@dimen/margin_16"
+                        android:background="@color/cardStrokeColor"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/sub_category_title5"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:paddingStart="@dimen/margin_24"
+                        android:paddingEnd="@dimen/margin_16"
+                        android:gravity="center_vertical"
+                        android:drawablePadding="@dimen/margin_16"
+                        android:text="Rotors and Stators"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="@dimen/margin_16"
+                        android:layout_marginEnd="@dimen/margin_16"
+                        android:background="@color/cardStrokeColor"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_sub_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:layout_marginBottom="@dimen/margin_8"
+                        android:layout_marginStart="@dimen/margin_24"
+                        android:layout_marginEnd="@dimen/margin_24"
+                        android:gravity="center"
+                        android:text="+ Add Subcategory"
+                        android:textAllCaps="true"
+                        app:iconPadding="-30dp"
+                        app:cornerRadius="@dimen/margin_16"
+                        android:textColor="@color/white"
+                        app:iconSize="@dimen/margin_24"
+                        android:textSize="16dp"
+                        app:backgroundTint="@color/colorPrimary" />
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
